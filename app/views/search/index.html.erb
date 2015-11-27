@@ -1,0 +1,8 @@
+<%= form_for Search.new, remote: true do |f| %>
+  <%= f.text_field :keyword, placeholder: 'Enter product to search' %>
+  <%= f.submit 'Search', id: 'searchBtn' %>
+<% end %>
+
+<div id="message"></div>
+
+<ul id="results"></ul>

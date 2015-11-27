@@ -1,0 +1,5 @@
+<% if @search.done? %>
+  jQuery('#results').empty().append('<%= j @search_results.html_safe %>');
+<% else %>
+  jQuery('#message').html('Please wait, search results are being crawled.')
+<% end %>

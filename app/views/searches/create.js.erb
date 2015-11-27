@@ -1,0 +1,8 @@
+<% if @search.persisted? %>
+  jQuery('#message').html('Search has been triggered in the background.');
+  jQuery('#new_search').attr('action', '/searches/<%= @search.id %>');
+  jQuery('#new_search').attr('method', 'get');
+  jQuery('#searchBtn').val('Show results from DB');
+<% else %>
+  jQuery('#message').html('<%= @search.errors.full_messages %>');
+<% end %>
